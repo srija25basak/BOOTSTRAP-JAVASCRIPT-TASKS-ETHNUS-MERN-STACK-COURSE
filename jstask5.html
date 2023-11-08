@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task5</title>
+</head>
+<body>
+    <h3>Sample Form</h3>
+    <div style="align-items: center; width:fit-content ; padding: 10px;">
+       <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+        <table>
+            <tr>
+                <td><label for="Full Name" name="Name">Name</label></td>
+                <td><input type="text" id="Full Name" placeholder=""></td>
+            </tr>
+            <tr>    
+                <td><label for="Username" name="Email">Email</label></td>
+                <td><input type="email" id="Username" placeholder=""></td>
+            </tr>
+            <tr>
+                <td><label for="website" name="Website">Website </label></td> 
+                <td><input type="text" value="website" placeholder=""></td>
+            </tr>
+            <tr>
+                <td><label for="message" name="message">Message</label></td> 
+                <td><textarea name="message" placeholder=""></textarea></td>
+            </tr>
+           
+            
+         </table>
+                <input type="submit" placeholder="Submit">
+
+     
+
+      </form>
+    </div>
+
+      <script>
+       function validateForm() {
+  let x = document.forms["myForm"]["Name"]["Email"]["Website"]["message"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+      </script>
+</body>
+</html>
